@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ImproveAnyTask is an autonomous post-training harness that iteratively diagnoses errors, selects research-backed strategies, and improves LLM task performance.">
+  <meta name="keywords" content="ImproveAnyTask, autonomous post-training, model self-improvement, agent harness, LLM adaptation, data curation, task-specific fine-tuning, error attribution, AI agents">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://improveanytask.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ImproveAnyTask: An Autonomous Post-Training Harness">
+  <meta property="og:description" content="Iterative error attribution, research-backed strategy selection, and executable model updates for task-specific LLM improvement.">
+  <meta property="og:url" content="https://improveanytask.github.io/">
+  <meta property="og:image" content="https://improveanytask.github.io/assets/teaser.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="citation_title" content="ImproveAnyTask: An Autonomous Post-Training Harness for Iterative Model Self-Improvement">
+  <meta name="citation_author" content="Xingbo Yao">
+  <meta name="citation_author" content="Xiaoman Wang">
+  <meta name="citation_author" content="Zhengwu Lei">
+  <meta name="citation_author" content="Tinghui Luo">
+  <meta name="citation_author" content="Yilin Zhang">
+  <meta name="citation_author" content="Yuefeng Wu">
+  <meta name="citation_author" content="Yijie Xu">
+  <meta name="citation_author" content="Tianfu Wang">
+  <meta name="citation_author" content="Qingyuan Zhan">
+  <meta name="citation_author" content="Ye Guo">
+  <meta name="citation_author" content="Daoxin Zhang">
+  <meta name="citation_author" content="Zhe Xu">
+  <meta name="citation_author" content="Jian Liu">
+  <meta name="citation_author" content="Hui Xiong">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_pdf_url" content="https://arxiv.org/">
+  <title>ImproveAnyTask</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "ImproveAnyTask: An Autonomous Post-Training Harness for Iterative Model Self-Improvement",
+    "description": "An autonomous post-training harness that iteratively diagnoses model errors, selects research-backed update directions, and executes task-specific model updates under a fixed compute budget.",
+    "datePublished": "2026",
+    "keywords": ["autonomous post-training", "model self-improvement", "LLM adaptation", "agent harness", "error attribution", "data curation"],
+    "author": [
+      {"@type":"Person","name":"Xingbo Yao"},
+      {"@type":"Person","name":"Xiaoman Wang"},
+      {"@type":"Person","name":"Zhengwu Lei"},
+      {"@type":"Person","name":"Tinghui Luo"},
+      {"@type":"Person","name":"Yilin Zhang"},
+      {"@type":"Person","name":"Yuefeng Wu"},
+      {"@type":"Person","name":"Yijie Xu"},
+      {"@type":"Person","name":"Tianfu Wang"},
+      {"@type":"Person","name":"Qingyuan Zhan"},
+      {"@type":"Person","name":"Ye Guo"},
+      {"@type":"Person","name":"Daoxin Zhang"},
+      {"@type":"Person","name":"Zhe Xu"},
+      {"@type":"Person","name":"Jian Liu"},
+      {"@type":"Person","name":"Hui Xiong"}
+    ],
+    "url": "https://improveanytask.github.io/",
+    "image": "https://improveanytask.github.io/assets/teaser.png"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ImproveAnyTask home">
+      <img src="assets/logo.png" alt="" width="32" height="32">
+      <span>ImproveAnyTask</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#overview">Overview</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="overview">
+      <div class="hero-copy">
+        <h1>ImproveAnyTask: An Autonomous Post-Training Harness for Iterative Model Self-Improvement</h1>
+        <div class="authors" aria-label="Authors">
+          <span>Xingbo Yao<sup>1,3,*</sup></span>
+          <span>Xiaoman Wang<sup>4,*</sup></span>
+          <span>Zhengwu Lei<sup>3,5</sup></span>
+          <span>Tinghui Luo<sup>3,5</sup></span>
+          <span>Yilin Zhang<sup>3</sup></span>
+          <span>Yuefeng Wu<sup>3,6</sup></span>
+          <span>Yijie Xu<sup>1</sup></span>
+          <span>Tianfu Wang<sup>1</sup></span>
+          <span>Qingyuan Zhan<sup>3</sup></span>
+          <span>Ye Guo<sup>3</sup></span>
+          <span>Daoxin Zhang<sup>3</sup></span>
+          <span>Zhe Xu<sup>3</sup></span>
+          <span>Jian Liu<sup>3,†</sup></span>
+          <span>Hui Xiong<sup>1,2,†</sup></span>
+        </div>
+        <p class="affiliations">
+          <sup>1</sup>HKUST(GZ) &nbsp; <sup>2</sup>HKUST &nbsp; <sup>3</sup>Xiaohongshu Inc. &nbsp;
+          <sup>4</sup>ECNU &nbsp; <sup>5</sup>ZJU &nbsp; <sup>6</sup>NTU<br>
+          <small><sup>*</sup>Equal contribution. &nbsp; <sup>†</sup>Corresponding authors.</small>
+        </p>
+        <p class="summary">
+          ImproveAnyTask diagnoses model errors, selects research-backed update directions,
+          and executes task-specific post-training within a fixed compute budget.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="https://arxiv.org/" rel="noopener">Paper</a>
+          <a class="button" href="https://github.com/improveanytask/improveanytask.github.io" rel="noopener">GitHub</a>
+        </div>
+        <div class="topic-list" aria-label="Research topics">
+          <span>Autonomous post-training</span>
+          <span>LLM adaptation</span>
+          <span>Agent harness</span>
+          <span>Model self-improvement</span>
+        </div>
+      </div>
+
+      <div class="headline-stats" aria-label="Headline results">
+        <div><strong>11</strong><span>benchmarks</span></div>
+        <div><strong>+18.29</strong><span>Base mean gain</span></div>
+        <div><strong>+11.97</strong><span>Instruct mean gain</span></div>
+        <div><strong>24 h</strong><span>budget per optimization</span></div>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="assets/teaser.png" alt="Performance comparison across eleven benchmarks in five capability domains.">
+        <figcaption>
+          Qwen3.5-4B-Base results across five domains. ImproveAnyTask improves all 11 tasks,
+          with a maximum gain of 41.96 percentage points on LiveCodeBench v6.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="method" class="section band">
+      <div class="section-heading">
+        <p class="eyebrow">Method</p>
+        <h2>From observed errors to executable updates</h2>
+        <p>
+          The harness organizes task adaptation as a repeated evaluation, research, update,
+          and re-evaluation loop.
+        </p>
+      </div>
+
+      <div class="steps">
+        <article>
+          <span class="step-number">01</span>
+          <h3>Error Attribution</h3>
+          <p>Combines aggregate metrics with individual failures to identify the highest-impact problem.</p>
+        </article>
+        <article>
+          <span class="step-number">02</span>
+          <h3>Update Direction</h3>
+          <p>Compares research-backed strategies by expected gain, applicability, and reproduction difficulty.</p>
+        </article>
+        <article>
+          <span class="step-number">03</span>
+          <h3>Executable Model Updates</h3>
+          <p>Translates the selected strategy into data and training, with execution checks before full post-training.</p>
+        </article>
+      </div>
+
+      <figure class="wide-figure">
+        <img src="assets/framework.png" alt="ImproveAnyTask framework showing error attribution, update direction, model updates, and re-evaluation.">
+        <figcaption>ImproveAnyTask treats task adaptation as iterative model optimization.</figcaption>
+      </figure>
+    </section>
+
+    <section id="results" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Main results</p>
+        <h2>Broad gains under the same budget</h2>
+        <p>
+          We evaluate Base and Instruct models on knowledge, reasoning, instruction following,
+          coding, tool use, and general-agent tasks.
+        </p>
+      </div>
+
+      <div class="result-grid">
+        <article>
+          <strong>+41.96</strong>
+          <h3>Largest improvement</h3>
+          <p>LiveCodeBench v6 on Qwen3.5-4B-Base.</p>
+        </article>
+        <article>
+          <strong>5</strong>
+          <h3>Capability domains</h3>
+          <p>Knowledge, reasoning, instruction following, coding, and agents.</p>
+        </article>
+        <article>
+          <strong>2</strong>
+          <h3>Model initializations</h3>
+          <p>Qwen3.5-4B-Base and Qwen3.5-4B-Instruct.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="analysis" class="section band">
+      <div class="section-heading">
+        <p class="eyebrow">Optimization analysis</p>
+        <h2>Iterative gains, recovery, and module effects</h2>
+        <p>
+          Extended optimization records both successful updates and regressions, while ablations
+          replace each major module with a basic alternative.
+        </p>
+      </div>
+
+      <div class="analysis-grid">
+        <figure>
+          <img src="assets/ifeval-trajectory.png" alt="IFEval optimization trajectory over a 100-hour equivalent compute budget.">
+          <figcaption>
+            IFEval over a 100-hour equivalent budget. The trajectory reaches 85.21% before rejecting a weaker final candidate.
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="assets/ablation.png" alt="Ablation trajectories for MMLU-Pro and MATH-500.">
+          <figcaption>
+            MMLU-Pro and MATH-500 trajectories. Replacing any major module reduces the final improvement.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section closing">
+      <img src="assets/logo.png" alt="" width="58" height="58">
+      <h2>Task adaptation without manually redesigning every iteration</h2>
+      <p>
+        ImproveAnyTask connects diagnosis, research, and post-training in one continuous loop,
+        reducing the manual effort required to improve a model for a specific task.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <span>ImproveAnyTask</span>
+    <a href="https://github.com/improveanytask/improveanytask.github.io">View source on GitHub</a>
+  </footer>
+</body>
+</html>

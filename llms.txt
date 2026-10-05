@@ -1,0 +1,26 @@
+# ImproveAnyTask
+
+ImproveAnyTask is an autonomous post-training harness for iterative model self-improvement.
+
+## Core idea
+
+The harness repeatedly connects three modules:
+1. Error Attribution uses aggregate metrics and individual failure cases to identify a focal problem.
+2. Update Direction compares research-backed strategies by expected gain, applicability, and reproduction difficulty.
+3. Executable Model Updates translates the selected strategy into training data and a training configuration, with execution checks before full post-training.
+
+## Main findings
+
+- Evaluated on 11 benchmarks across five capability domains.
+- Mean improvement of 18.29 percentage points on Qwen3.5-4B-Base.
+- Mean improvement of 11.97 percentage points on Qwen3.5-4B-Instruct.
+- Maximum improvement of 41.96 percentage points on LiveCodeBench v6.
+- Each optimization uses a 24-hour budget with resources equivalent to eight NVIDIA H20 GPUs.
+
+## Research topics
+
+Autonomous post-training, task-specific LLM adaptation, model self-improvement, agent harnesses, error attribution, data curation, supervised fine-tuning, benchmark optimization.
+
+## Canonical page
+
+https://improveanytask.github.io/

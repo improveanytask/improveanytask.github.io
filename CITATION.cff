@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use ImproveAnyTask, please cite the paper."
+title: "ImproveAnyTask: An Autonomous Post-Training Harness for Iterative Model Self-Improvement"
+type: article
+year: 2026
+url: "https://improveanytask.github.io/"
+authors:
+  - family-names: Yao
+    given-names: Xingbo
+  - family-names: Wang
+    given-names: Xiaoman
+  - family-names: Lei
+    given-names: Zhengwu
+  - family-names: Luo
+    given-names: Tinghui
+  - family-names: Zhang
+    given-names: Yilin
+  - family-names: Wu
+    given-names: Yuefeng
+  - family-names: Xu
+    given-names: Yijie
+  - family-names: Wang
+    given-names: Tianfu
+  - family-names: Zhan
+    given-names: Qingyuan
+  - family-names: Guo
+    given-names: Ye
+  - family-names: Zhang
+    given-names: Daoxin
+  - family-names: Xu
+    given-names: Zhe
+  - family-names: Liu
+    given-names: Jian
+  - family-names: Xiong
+    given-names: Hui
