@@ -2,7 +2,7 @@
 
 Official project page for **ImproveAnyTask: An Autonomous Post-Training Harness for Iterative Model Self-Improvement**.
 
-ImproveAnyTask is an autonomous post-training harness that iteratively diagnoses model errors, selects research-backed update directions, and executes task-specific model updates under a fixed compute budget.
+ImproveAnyTask is an autonomous post-training harness for iterative and recursive self-improvement of LLMs. It diagnoses model errors, selects research-backed update directions, and executes task-specific model updates under a fixed compute budget.
 
 ## Project page
 

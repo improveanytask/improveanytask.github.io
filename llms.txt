@@ -1,6 +1,6 @@
 # ImproveAnyTask
 
-ImproveAnyTask is an autonomous post-training harness for iterative model self-improvement.
+ImproveAnyTask is an autonomous post-training harness for iterative and recursive self-improvement of large language models.
 
 ## Core idea
 
@@ -19,7 +19,7 @@ The harness repeatedly connects three modules:
 
 ## Research topics
 
-Autonomous post-training, task-specific LLM adaptation, model self-improvement, agent harnesses, error attribution, data curation, supervised fine-tuning, benchmark optimization.
+Recursive self-improvement (RSI), recursive model self-improvement, iterative model self-improvement, self-evolving AI, autonomous model improvement, autonomous post-training, task-specific LLM adaptation, agent harnesses, error attribution, data curation, supervised fine-tuning, benchmark optimization.
 
 ## Canonical page
 
