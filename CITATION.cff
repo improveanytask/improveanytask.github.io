@@ -3,7 +3,13 @@ message: "If you use ImproveAnyTask, please cite the paper."
 title: "ImproveAnyTask: An Autonomous Post-Training Harness for Iterative Model Self-Improvement"
 type: article
 year: 2026
-url: "https://improveanytask.github.io/"
+doi: "10.48550/arXiv.2610.06347"
+url: "https://arxiv.org/abs/2610.06347"
+repository-code: "https://github.com/improveanytask/improveanytask.github.io"
+identifiers:
+  - type: other
+    value: "arXiv:2610.06347"
+    description: "arXiv identifier"
 authors:
   - family-names: Yao
     given-names: Xingbo

@@ -24,3 +24,11 @@ Recursive self-improvement (RSI), recursive model self-improvement, iterative mo
 ## Canonical page
 
 https://improveanytask.github.io/
+
+## Paper
+
+https://arxiv.org/abs/2610.06347
+
+## Source repository
+
+https://github.com/improveanytask/improveanytask.github.io
